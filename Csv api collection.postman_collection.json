@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "5b7f958d-f7db-4f31-9ca3-c063383299c0",
+		"name": "Csv api collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "READ requests",
+			"item": [
+				{
+					"name": "Find all no parameters passed",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/author/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"author",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "One parameter(biography) passed",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/author/edit?biography=good man",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"author",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "biography",
+									"value": "good man"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UPDATE requests",
+			"item": [
+				{
+					"name": "Biography value update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/author?searchKey=biography&updateKey=biography&keyValue=good man&newValue=very good man",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"author"
+							],
+							"query": [
+								{
+									"key": "searchKey",
+									"value": "biography"
+								},
+								{
+									"key": "updateKey",
+									"value": "biography"
+								},
+								{
+									"key": "keyValue",
+									"value": "good man"
+								},
+								{
+									"key": "newValue",
+									"value": "very good man"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE requests",
+			"item": [
+				{
+					"name": "Delete author with \"bad man\" biography",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/author?biography=bad man",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"author"
+							],
+							"query": [
+								{
+									"key": "biography",
+									"value": "bad man"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CREATE requests",
+			"item": [
+				{
+					"name": "create a new author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/author?name.firstName=aman&name.lastName=lateef&biography=low tempered man",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"author"
+							],
+							"query": [
+								{
+									"key": "name.firstName",
+									"value": "aman"
+								},
+								{
+									"key": "name.lastName",
+									"value": "lateef"
+								},
+								{
+									"key": "biography",
+									"value": "low tempered man"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
